@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>saarthi ai</title>
+    <style>
+    
+        .mytable {
+            width: 100vw;
+            height: 100vh;
+              display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mytable">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Qualification</th>
+                <th>Place</th>
+            </tr>
+<tbody id="content" >
+            <tr>
+                <td> Nithin</td>
+                <td> btech</td>
+                <td> Anekal</td>
+            </tr>
+            <tr>
+                <td>JOHN doe</td>
+                <td> mca</td>
+                <td> japan</td>
+            </tr>
+            </tbody>
+        </table>
+        
+        <button onclick="clearfun()">clear items</button>
+    </div>
+    <script>
+        clearfun = () => {
+            let row=document.getElementById('content')
+            row.parentNode.removeChild(row)
+        }
+
+
+    </script>
+</body>
+
+</html>

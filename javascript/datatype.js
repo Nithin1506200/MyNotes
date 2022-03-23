@@ -28,7 +28,6 @@ x.pop()
 x.shift() => removes and returns first element
 x.push("value")
 x.unshift("sdf") => puts new element at beginning and returns length of new array
-
 x.splice(2,0,"value")
 //Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements
 // 2 The first parameter (2) defines the position where new elements should be added (spliced in).
@@ -80,3 +79,26 @@ x.fill("var") replace all elements in x by var
 
 
 x.map(func)
+
+************************
+set 
+new Set()	Creates a new Set
+add()	Adds a new element to the Set
+delete()	Removes an element from a Set
+has()	Returns true if a value exists in the Set
+forEach()	Invokes a callback for each element in the Set
+values()	Returns an iterator with all the values in a Set
+Property	Description
+size	Returns the number of elements in a Set
+
+
+/********* */
+new Map()	Creates a new Map
+set()	Sets the value for a key in a Map
+get()	Gets the value for a key in a Map
+delete()	Removes a Map element specified by the key
+has()	Returns true if a key exists in a Map
+forEach()	Calls a function for each key/value pair in a Map
+entries()	Returns an iterator with the [key, value] pairs in a Map
+Property	Description
+size	Returns the number of elements in a Map

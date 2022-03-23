@@ -1,0 +1,16 @@
+install angular
+INSTALL NODEJS
+update 
+
+
+npm install -g npm
+npm uninstall -g angular-cli
+npm cache verify
+npm install -g @angular/cli 
+
+create project :
+cd /d "path location"
+        ng new my-dream-app
+        cd my-dream-app
+        ng serve
+

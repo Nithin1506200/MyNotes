@@ -1,0 +1,5 @@
+/**
+ * ng g c mycomponent
+ * 
+ */
+
