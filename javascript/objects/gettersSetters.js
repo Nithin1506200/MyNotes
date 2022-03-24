@@ -15,7 +15,7 @@ const person1 = {
     return this.firstName + " " + this.lastName;
   },
 };
-//Setters
+// ! todo Setters
 
 const person36 = {
   firstName: "John",
