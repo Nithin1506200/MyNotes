@@ -1,3 +1,6 @@
+
+// indent rainbow
+//better-comments
 {
   "editor.tokenColorCustomizations": {
     "variables": "#cf5b0d",

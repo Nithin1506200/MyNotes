@@ -6,7 +6,7 @@
 const car = { type: "Fiat", model: "500", color: "white" };
 // TODO:  You can change a property:
 car.color = "red";
-// ? You can add a property:
+// + You can add a property:
 car.owner = "Johnson";
 
 //****************** */
