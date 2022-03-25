@@ -1,4 +1,3 @@
-
 // indent rainbow
 //better-comments
 {
@@ -37,7 +36,16 @@
     },
     {
       "tag": "+",
-      "color": "#0000aa",
+      "color": "#0055ff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "ffffff",
+      "bold": false,
+      "italic": true
+    },
+    {
+      "tag": "->",
+      "color": "00ff00",
       "strikethrough": false,
       "underline": false,
       "backgroundColor": "ffffff",
