@@ -24,7 +24,10 @@ array2.pop(); // ~ returns length
 array2.push("apple");
 array2.shift(); // push element at first
 array2.unshift();
+array2.slice((start = 1), (end = 3)); // returns copy of arrya // dont affect original array+//
 
+//default start=0
+//default end= last
 array2.splice(2, 0, "apple", "mango");
 // 2 -> position where new elements should be added
 // 0 -> how many elements should be deleted
