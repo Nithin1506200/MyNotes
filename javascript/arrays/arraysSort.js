@@ -10,7 +10,7 @@ x.sort(function (a, b) {
 // or
 x.sort((a, b) => a - b);
 
-//sort in descending order
+//sort in descending order 
 x.sort((a, b) => b - a);
 console.log(x);
 
