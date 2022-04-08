@@ -10,7 +10,7 @@ x.sort(function (a, b) {
 // or
 x.sort((a, b) => a - b);
 
-//sort in descending order 
+//sort in descending order
 x.sort((a, b) => b - a);
 console.log(x);
 
@@ -26,6 +26,9 @@ cars.sort((a, b) => {
   if (a.name > b.name) {
     return 1;
   } else return -1;
+});
+cars.sort((a, b) => {
+  return a > b ? 1 : -1;
 });
 cars.sort((a, b) => a - b); // sort using date object
 console.log(cars);
