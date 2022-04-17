@@ -1,26 +1,37 @@
-#[derive(Debug)]
-pub struct LinkedList<T>(Option<(T,Box<LinkedList<T>>)>);
-impl<T> LinkedList<T> {
-    pub fn new()-> Self {
-        LinkedList(None)
-    }
-    pub fn push_fornt(&mut self, data:T) {
-        let t=self.0.take();
-        self.0=Some((data,Box::new(LinkedList(t))));
-    }
-    pub fn push_back(&mut self, data:T) {
-        match self.0 {
-            Some((_, ref mut child))=> child.push_back(data),
-            None => self.push_fornt(data),
-        }
-    }
+use std::boxed::Box;
+ use core::fmt::Debug;
+
+struct Node<T> {
+    value:T,
+    next:Option<Box<Node<T>>>,
+    prev:Option<Box<Node<T>>>,
+}
+#[derive(Clone)]
+struct LinkedList<T> {
+    
+    head:Option<Box<Node<T>>>,
 }
 
+impl<T> LinkedList<T> {
+    fn new()-> Self {
+        Self {
+            head: None,
+        }
+    }
+    fn push_front(&mut self,value:T) {
+        let mut head=self.head;
+        let new_node= Node{
+            value:value,
+            next:head,
+            prev:None,
+        };
+        head=Some(Box::new(new_node));
 
+
+    }
+}
 fn main() {
-    let mut ll=LinkedList::new();
-    ll.push_fornt(3);
-    ll.push_back(12);
-    ll.push_fornt(1);
-    println!("ll = {:?}",ll);
+    let mut xs=LinkedList::<String>::new();
+    println!("Its working");
+    
 }
