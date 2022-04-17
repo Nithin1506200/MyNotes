@@ -1,0 +1,2 @@
+TO update: rustup update
+New porject: cargo new hello-rust
