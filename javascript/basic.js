@@ -40,8 +40,8 @@ primitive types:
                 do while
                 for
                 break continue
-                for in
-                for of
+                for in #iterate through values of Object
+                for of # for in loop is used to iterate throught he keys of an Object
 
             control flow:
                         if else
