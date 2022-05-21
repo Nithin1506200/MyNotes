@@ -46,7 +46,6 @@ class LinkedList:
                     slow=slow.next
                     count+=1
                 return count
-
             slow=slow.next
             fast=fast.next.next
             flag=1
