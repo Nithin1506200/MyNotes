@@ -44,6 +44,7 @@ function every(array, cb) {
   }
   return true;
 }
+
 function flat(array, depth = 1) {
   const newArray = [];
   for (let i = 0; i < array.length; i++) {

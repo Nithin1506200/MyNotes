@@ -45,7 +45,7 @@ class LinkedList:
                 while slow!=fast:
                     slow=slow.next
                     count+=1
-                return count
+                return count4258/69
             slow=slow.next
             fast=fast.next.next
             flag=1
