@@ -55,7 +55,7 @@
     {
       "tag": "-",
       "color": "#aa0000",
-      "strikethrough": true,
+      "strikethrough": false,
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,

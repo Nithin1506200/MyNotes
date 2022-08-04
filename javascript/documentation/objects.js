@@ -21,7 +21,7 @@
  * @private
  */
 
-function MyFunction(x, [option]) {
+function MyFunction(x, { option }) {
   const x = "jfdkj";
   console.log(option);
   return x;
