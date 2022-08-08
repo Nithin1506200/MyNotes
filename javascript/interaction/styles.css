@@ -1,0 +1,32 @@
+.coin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  perspective: 50px;
+}
+img {
+  transition: 0.5s ease-out;
+}
+
+img:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  margin: 5px 6px;
+}
+
+img:nth-child(2) {
+  width: 20px;
+  height: 30px;
+  margin: 9px;
+  padding-top: 26px;
+}
+img:nth-child(3) {
+  width: 30px;
+  height: 40px;
+  padding-bottom: 50px;
+}
+img:nth-child(4) {
+  width: 30px;
+  height: 20px;
+}

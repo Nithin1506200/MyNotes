@@ -5,7 +5,9 @@
 ```javascript
     const Login=()=>{
         const emalInputRef=useRef()
-
+    useEffect(()=>{
+        emailInputRef.current.activate()
+    },[])
         return(
             <Input
             ref={emailInputRef}
@@ -29,5 +31,5 @@
             <input ref={InputRef}>
         )
 
-    })
+    })In
 ```
