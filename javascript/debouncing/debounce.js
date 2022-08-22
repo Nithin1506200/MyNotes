@@ -17,6 +17,17 @@ function debounce(cb, delay = 1000) {
   };
 }
 
+/**
+ * ## this function is used for throtle
+ * use this for setting examples
+ *
+ *
+ *
+ * @author Nithin N <nithingowdan77@gmail.com>
+ * @param {function} cb - callback function to be passed
+ * @param {Number} wait - time in ms to be wait
+ * @return {function}
+ */
 function throtle(cb, wait = 1000) {
   let shouldwait = false;
   let cacheArgs;
