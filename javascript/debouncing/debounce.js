@@ -22,7 +22,10 @@ function debounce(cb, delay = 1000) {
  * use this for setting examples
  *
  *
- *
+ * @example
+ * let debouncedFilter=throtle(filter,1000)
+ * //use
+ * debouncedFilter(args)
  * @author Nithin N <nithingowdan77@gmail.com>
  * @param {function} cb - callback function to be passed
  * @param {Number} wait - time in ms to be wait
