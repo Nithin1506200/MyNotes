@@ -6,6 +6,7 @@
   - [map](#map)
   - [filter](#filter)
   - [reduce](#reduce)
+  - [slice](#slice)
 
 `A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.`
 
@@ -63,5 +64,17 @@ Array.prototype.MyReduce = function (cb, { initialValue }) {
     accumulator = cb(accumulator, this[i], i);
   }
   return accumulator;
+};
+```
+
+## slice
+
+```javascript
+Array.prototype.mySlice = function (first = 0, second = this.length) {
+  let newArray = new Array();
+  for (let i = first; i < second; i++) {
+    newArray.push(this[i]);
+  }
+  return newArray;
 };
 ```
