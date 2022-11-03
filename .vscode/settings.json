@@ -8,12 +8,12 @@
     "numbers": "#0999f0"
   },
   "indentRainbow.colors": [
-    "rgba(255,255,64,0.49)",
-    "rgba(127,255,127,0.49)",
-    "rgba(255,127,255,0.49)",
-    "rgba(79,206,36,0.49)",
-    "rgba(120,236,236,0.49)",
-    "rgba(79,26,236,0.49)"
+    "rgba(255,255,64,0.049)",
+    "rgba(127,255,127,0.049)",
+    "rgba(255,127,255,0.049)",
+    "rgba(79,206,36,0.049)",
+    "rgba(120,236,236,0.049)",
+    "rgba(79,26,236,0.049)"
   ],
   "indentRainbow.errorColor": "rgba(0,0,0,1)",
   "better-comments.highlightPlainText": true,
