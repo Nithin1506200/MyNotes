@@ -1,0 +1,7 @@
+
+[workspace]
+members = [
+    "data_structures",
+    "rust_lang_basics"
+]
+
