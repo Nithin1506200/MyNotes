@@ -1,15 +1,13 @@
 #[allow(dead_code)]
 
 pub struct SimpleLinkedList<T> {
-
-    head: Option<Box<Node<T>>>
+    head: Option<Box<Node<T>>>,
 }
 
 struct Node<T> {
     data: T,
     next: Option<Box<Node<T>>>,
 }
-
 
 impl<T> SimpleLinkedList<T> {
     pub fn new() -> Self {
@@ -26,7 +24,7 @@ impl<T> SimpleLinkedList<T> {
                 while current.next.is_some() {
                     current = current.next.as_ref().unwrap();
                     length = length + 1;
-                };
+                }
                 length
             }
         }
@@ -34,7 +32,10 @@ impl<T> SimpleLinkedList<T> {
 
     pub fn push(&mut self, _element: T) {
         let next: Option<Box<Node<T>>> = self.head.take();
-        let new_node = Some(Box::new(Node { data: _element, next }));
+        let new_node = Some(Box::new(Node {
+            data: _element,
+            next,
+        }));
         self.head = new_node;
     }
 
@@ -70,7 +71,7 @@ impl<T: Clone> SimpleLinkedList<T> {
                 while current.next.is_some() {
                     current = current.next.as_ref().unwrap();
                     ret_val.push(current.data.clone());
-                };
+                }
                 ret_val
             }
             _ => ret_val,
@@ -94,7 +95,7 @@ impl<T> Into<Vec<T>> for SimpleLinkedList<T> {
                 v.reverse();
                 v
             }
-            None => vec![]
+            None => vec![],
         }
     }
 }

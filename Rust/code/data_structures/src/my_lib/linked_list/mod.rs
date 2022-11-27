@@ -8,16 +8,13 @@ pub struct LinkedList<T> {
 
 #[derive(Debug, PartialEq, Clone)]
 struct Node<T> {
-    value:  T,
+    value: T,
     next: Option<Box<Node<T>>>,
 }
 
 impl<T> LinkedList<T> {
     pub fn new() -> LinkedList<T> {
-   
-        let new: LinkedList<T> = LinkedList {
-            head: None,
-        };
+        let new: LinkedList<T> = LinkedList { head: None };
         new
     }
     pub fn push(&mut self, value: T) {
@@ -56,32 +53,26 @@ impl<T> LinkedList<T> {
             }
         }
     }
+    /** drop is not needed in rust as it auto clears */
     pub fn drop(&mut self) {
-        let mut ptr=mem::replace(&mut self.head, None);
+        let mut ptr = mem::replace(&mut self.head, None);
         while let Some(mut node) = ptr {
-            ptr=mem::replace(&mut node.next, None);
+            ptr = mem::replace(&mut node.next, None);
         }
     }
-    pub fn get_tail(&mut self)->  Option<&mut Node<T>>{
-
-        let mut ptr=&mut self.head;
+    pub fn get_tail(&mut self) -> Option<&mut Node<T>> {
+        let mut ptr = &mut self.head;
         loop {
-            
-    
-        match ptr.as_mut() {
-            None=>{
-               return None;
-            },
-            Some(node) if(node.next.is_none()) =>{
-                return Some(node)
-              
-            },
-            Some(node) =>{
-              ptr=&mut node.next;
+            match ptr.as_mut() {
+                None => {
+                    return None;
+                }
+                Some(node) if (node.next.is_none()) => return Some(node),
+                Some(node) => {
+                    ptr = &mut node.next;
+                }
             }
         }
-    }
-       
     }
 }
 #[macro_export]
@@ -116,16 +107,16 @@ mod test {
         println!("array {:?}", new_linked_list);
     }
     #[test]
-    fn get_tail(){
-         let mut new_linked_list: LinkedList<i32> = LinkedList::new();
+    fn get_tail() {
+        let mut new_linked_list: LinkedList<i32> = LinkedList::new();
         new_linked_list.push(1);
         new_linked_list.push(2);
         new_linked_list.push(3);
-        println!("{:?}",new_linked_list.get_tail());
+        println!("{:?}", new_linked_list.get_tail());
     }
     #[test]
     fn macro_test() {
-        let ll=linkedlist!(5,6,7,8);
-        println!("{:?}",ll);
+        let ll = linkedlist!(5, 6, 7, 8);
+        println!("{:?}", ll);
     }
 }
