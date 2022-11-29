@@ -1,3 +1,4 @@
+mod max_depth;
 mod min_depth;
 
 use std::{cell::RefCell, rc::Rc};
