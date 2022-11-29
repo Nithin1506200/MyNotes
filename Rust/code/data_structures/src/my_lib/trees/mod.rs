@@ -1,7 +1,12 @@
 mod max_depth;
 mod min_depth;
 
-use std::{cell::RefCell, rc::Rc};
+use core::time;
+use std::{
+    cell::RefCell,
+    rc::Rc,
+    sync::{Arc, Mutex},
+};
 
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
