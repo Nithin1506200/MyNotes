@@ -1,3 +1,4 @@
+#[allow(unused_variables)]
 #[cfg(test)]
 mod vec_test {
 
@@ -23,6 +24,18 @@ mod vec_test {
         //enumerate
         for (i, x) in v.iter().enumerate() {
             println!("i:{} x:{} ", i, x)
+        }
+    }
+    #[test]
+    fn get() {
+        let vec = vec![1, 2, 3, 4];
+        //this will cause index out of bounds
+        // let x = vec[9];
+        let x = vec.get(9);
+
+        match vec.get(2) {
+            Some(x) => println!("{}", x),
+            None => println!("none"),
         }
     }
 }
