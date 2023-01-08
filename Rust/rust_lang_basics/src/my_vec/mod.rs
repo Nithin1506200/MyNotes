@@ -3,6 +3,9 @@
 mod vec_test {
 
     #[test]
+    /**
+     * initiate vec
+     */
     fn vec_impl() {
         let v: Vec<i32> = Vec::new();
         println!("{:?}", v);
@@ -10,6 +13,9 @@ mod vec_test {
         println!("{:?}", v2);
     }
     #[test]
+    /**
+     * iterating vec and mutable iter
+     */
     fn iter() {
         let mut v: Vec<i32> = vec![1, 2, 3, 4];
         //normal iter
@@ -27,6 +33,9 @@ mod vec_test {
         }
     }
     #[test]
+    /**
+     * safely accessing vec
+     */
     fn get() {
         let vec = vec![1, 2, 3, 4];
         //this will cause index out of bounds
