@@ -43,7 +43,7 @@ function throtle(cb, wait = 1000) {
     shouldwait = true;
     setTimeout(() => {
       shouldwait = false;
-    });
+    }, wait);
   };
 }
 

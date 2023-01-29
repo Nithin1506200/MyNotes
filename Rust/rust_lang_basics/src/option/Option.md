@@ -1,0 +1,1 @@
+- .take() will move the value of some option and replace None in the place
