@@ -1,0 +1,13 @@
+
+@hostname = http://localhost:8000
+// test the liveleness
+GET {{hostname}}/ping
+###
+POST {{hostname}}/ping
+###
+DELETE  {{hostname}}/ping
+###
+PATCH  {{hostname}}/ping
+
+###
+GET {{hostname}}/name/?inputname=hemanth

@@ -1,0 +1,44 @@
+Arguments: 
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin:/opt/homebrew/sbin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Users/nithin-saartgu/.cargo/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/nithin-saartgu/gitHubThings/nithin/MyNotes/javascript/techStack/backend/expressjs/package.json: Unexpected string in JSON at position 176
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "expressjs",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+  
+    "devDependencies": {
+      "typescript": "^4.9.4",
+       "ts-node-dev": "^2.0.0"
+    }
+    "scripts" : {
+      "dev":"tsc-node-dev src/app.ts"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
