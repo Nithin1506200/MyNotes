@@ -28,18 +28,17 @@ app
 // custom middle ware example
 
 const middleware =
-  (name: string) => (req: Request, res: Response, next: NextFunction) => {
-    res.locals.customname = "nithin";
-    next();
+  (name: string = "nithin") =>
+  (req: Request, res: Response, next: NextFunction) => {
+    res.locals.customname = name;
+    return next();
   };
-app.get(
-  "/name",
-  // middleware,
-  (req: Request, res: Response) => {
-    console.log(req.query);
-    res.send("jioj");
-  }
-);
+app.get("/middleware", middleware("dcd"), (req: Request, res: Response) => {
+  return res.send({
+    inputname: req.query.inputname,
+    middleware__name: res.locals.customname,
+  });
+});
 // listen to port
 
 app.listen(process.env.port || 8000, () => {
