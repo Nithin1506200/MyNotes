@@ -28,11 +28,6 @@ mod tests {
         println!("after sort {:?}", v1);
         v1.dedup();
         println!("after dedup {:?}", v1);
-
-        let s = st.bytes();
-        for i in s {
-            println!("byte me :{}", i);
-        }
     }
     #[test]
     fn looping() {

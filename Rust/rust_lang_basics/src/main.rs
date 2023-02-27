@@ -1,3 +1,4 @@
+mod generics_implimentation;
 mod lifetimes;
 mod my_hashmap;
 mod my_string;

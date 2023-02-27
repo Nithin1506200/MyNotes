@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "tesit",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,5 +9,16 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "dependencies": {
+    "next": "^13.2.1",
+    "nextra": "^2.2.16",
+    "nextra-theme-docs": "^2.2.16",
+    "react": "^18.2.0",
+    "react-docs": "^0.0.1",
+    "react-dom": "^18.2.0"
+  }
 }

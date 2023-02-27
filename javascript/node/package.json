@@ -1,0 +1,14 @@
+{
+  "name": "nithin",
+  "version": "n",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "serve": "^14.2.0"
+  }
+}

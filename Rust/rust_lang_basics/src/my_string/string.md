@@ -6,6 +6,8 @@
   - [replace](#replace)
   - [split charactors](#split-charactors)
   - [vec operation](#vec-operation)
+    - [sort](#sort)
+    - [dedup (de duplicate)](#dedup-de-duplicate)
 
 # strings
 
@@ -50,6 +52,10 @@ let v1: Vec<char> = st.chars().collect();
 ```
 
 ## vec operation
+
+### sort
+
+### dedup (de duplicate)
 
 ```rust
    let st = String::from("c d i d k a b c");
