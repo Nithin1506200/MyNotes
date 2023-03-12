@@ -36,3 +36,5 @@ export const Small = Template.bind({});
 Small.args = {
   message: "nithin",
 };
+const skeleton: ComponentStory<typeof Button> = (args) => <Button.skeleton />;
+export const skeletonOfButton = skeleton.bind({});

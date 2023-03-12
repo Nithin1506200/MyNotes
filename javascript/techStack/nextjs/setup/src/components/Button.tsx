@@ -9,6 +9,12 @@ interface props {
  * @param props t
  * @returns
  */
-export default function Button(props: props) {
+function Button(props: props) {
   return <button>{props.message}</button>; //
 }
+Button.skeleton = () => (
+  <>
+    <span>skeleton</span>
+  </>
+);
+export default Button;
