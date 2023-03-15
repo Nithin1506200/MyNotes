@@ -1,13 +1,14 @@
 "use client";
-import { RootState } from "@/store/store";
+
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { changeName } from "@/store/dummy/dummy1/dummy1.slice";
+import { useAppDispatch, useAppSelector } from "hooks/store.hooks";
 export default function Web() {
-  const state: any = useSelector<RootState>((store) => store.dummyReducer);
+  const state = useAppSelector((store) => store.dummyReducer);
   console.log(state);
-  console.log("testing");
-  const dispatch = useDispatch();
+  console.log("testing", changeName.toString());
+  const dispatch = useAppDispatch();
   return (
     <main>
       welcome to appo n<h1>dummy Reducer1 : {state.dummy1.value as string}</h1>

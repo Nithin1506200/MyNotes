@@ -16,6 +16,15 @@ export const dummySlice1 = createSlice({
     changeName: (state, action: PayloadAction<string>) => {
       state.value = action.payload;
     },
+    getNamesApicall:(state,action:PayloadAction<string>)=>{
+
+    },
+     getNamesApicallSuccess:(state,action:PayloadAction<string>)=>{
+      
+    },
+     getNamesApicallFailure:(state,action:PayloadAction<string>)=>{
+      
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(sharedActions.resetAllState, (state, action) => {
@@ -25,4 +34,4 @@ export const dummySlice1 = createSlice({
     });
   },
 });
-export const { changeName } = dummySlice1.actions;
+export const { changeName ,getNamesApicall } = dummySlice1.actions;

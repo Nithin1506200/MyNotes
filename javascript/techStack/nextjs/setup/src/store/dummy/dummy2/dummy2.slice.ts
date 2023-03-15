@@ -10,19 +10,17 @@ const initialState: DummyState = {
 };
 
 export const dummySlice2 = createSlice({
-  name: "dummy/dummy1",
+  name: "dummy/dummy2",
   initialState,
   reducers: {
-    changeName: (state, action: PayloadAction<string>) => {
+    changeNameOfSlice2: (state, action: PayloadAction<string>) => {
       state.value = action.payload;
     },
   },
   extraReducers: (builder) => {
     builder.addCase(sharedActions.resetAllState, (state, action) => {
-      // not valid
-      //  state=initialState
       return initialState;
     });
   },
 });
-export const { changeName } = dummySlice2.actions;
+export const { changeNameOfSlice2 } = dummySlice2.actions;
