@@ -1,2 +1,2 @@
-import dummySvg from "./dummy.svg";
+import dummySvg from './dummy.svg';
 export { dummySvg };
