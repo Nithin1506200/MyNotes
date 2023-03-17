@@ -1,0 +1,27 @@
+{
+  "name": "chatbotapps",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-react-app": "^7.0.1",
+    "sass": "^1.59.2",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1"
+  }
+}
