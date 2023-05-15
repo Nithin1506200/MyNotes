@@ -1,0 +1,19 @@
+{
+  "name": "expressjs2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsnd --respawn --transpile-only -r tsconfig-paths/register -r dotenv/config src/index.ts dotenv_config_path=./.env.staging",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.10",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.1.2",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
