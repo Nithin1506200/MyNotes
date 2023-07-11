@@ -35,3 +35,13 @@ window->onEvent((payload)=>(
     //do something
     Js.log("print the payload"++payload)
 ))
+
+//--------------JOS------------- Currying function using (. )
+@val @scope("JOS") external emitEventWithLog:(string)=>(string)=>(string)=>unit="emitEventWithLog"
+emitEventWithLog( "helllo")("world")( "😃")
+
+@val @scope("JOS") external emitEventWithLog:(. string)=>(. string)=>(. string)=>unit="emitEventWithLog"
+emitEventWithLog(. "helllo")(. "world")(. "😃")
+
+
+// ()->()->("d")->("fd")->("Fds")->emitEventWithLog
