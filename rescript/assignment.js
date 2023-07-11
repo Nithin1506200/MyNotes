@@ -24,6 +24,7 @@ payload =  {
         service : JOS.self
     }
 }
+
 logger("external")("Informing parent i.e. \"" + JOS.parent +  "\" that microapp is initialised and preprocssing (e.g. api calls / other background calls) is completed by sending initiate_result event!")({
     eventFunction: "onEvent",
     payload: payload,
