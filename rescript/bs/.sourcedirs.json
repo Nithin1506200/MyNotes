@@ -1,0 +1,1 @@
+{ "dirs" : [ "src" ] , "pkgs" : [ [ "rescript-webapi" , "/Users/nithin.n/Documents/rescript_play/node_modules/rescript-webapi" ] , [ "@rescript/core" , "/Users/nithin.n/Documents/rescript_play/node_modules/@rescript/core" ] ] , "generated" : [] }

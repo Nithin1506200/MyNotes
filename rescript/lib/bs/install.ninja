@@ -1,0 +1,34 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o json.cmi : cp ../bs/src/learning/json.cmi
+o json.cmj : cp ../bs/src/learning/json.cmj
+o json.cmt : cp ../bs/src/learning/json.cmt
+o json.res : cp ../../src/learning/json.res
+o send.cmi : cp ../bs/src/learning/send.cmi
+o send.cmj : cp ../bs/src/learning/send.cmj
+o send.cmt : cp ../bs/src/learning/send.cmt
+o send.res : cp ../../src/learning/send.res
+o exports.cmi : cp ../bs/src/learning/exports.cmi
+o exports.cmj : cp ../bs/src/learning/exports.cmj
+o exports.cmt : cp ../bs/src/learning/exports.cmt
+o exports.res : cp ../../src/learning/exports.res
+o my_belt.cmi : cp ../bs/src/learning/my_belt.cmi
+o my_belt.cmj : cp ../bs/src/learning/my_belt.cmj
+o my_belt.cmt : cp ../bs/src/learning/my_belt.cmt
+o my_belt.res : cp ../../src/learning/my_belt.res
+o abstract.cmi : cp ../bs/src/learning/abstract.cmi
+o abstract.cmj : cp ../bs/src/learning/abstract.cmj
+o abstract.cmt : cp ../bs/src/learning/abstract.cmt
+o abstract.res : cp ../../src/learning/abstract.res
+o Demo.cmi : cp ../bs/src/juspay/Demo.cmi
+o Demo.cmj : cp ../bs/src/juspay/Demo.cmj
+o Demo.cmt : cp ../bs/src/juspay/Demo.cmt
+o Demo.res : cp ../../src/juspay/Demo.res
+o assignment.cmi : cp ../bs/src/juspay/assignment.cmi
+o assignment.cmj : cp ../bs/src/juspay/assignment.cmj
+o assignment.cmt : cp ../bs/src/juspay/assignment.cmt
+o assignment.res : cp ../../src/juspay/assignment.res
+build install.stamp : touch json.cmi json.cmj send.cmi send.cmj exports.cmi exports.cmj my_belt.cmi my_belt.cmj abstract.cmi abstract.cmj Demo.cmi Demo.cmj assignment.cmi assignment.cmj 

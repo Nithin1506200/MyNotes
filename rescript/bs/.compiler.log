@@ -1,0 +1,56 @@
+#Start(1689141105893)
+
+  Warning number 27
+  /Users/nithin.n/Documents/rescript_play/src/Demo.res:50:12-14
+
+  48 ┆ | None => 
+  49 ┆ Js.log("the element is not found")
+  50 ┆ | Some(ele)=>
+  51 ┆ Js.log("the element is found")
+  52 ┆ 
+
+  unused variable ele.
+
+
+  Warning number 27
+  /Users/nithin.n/Documents/rescript_play/src/Demo.res:122:42-46
+
+  120 │ 
+  121 │ @send external addEventListner : (Dom.element,string,Dom.event=>unit)=
+      │ >unit="addEventListner"
+  122 │ requestButton->addEventListner( "click",(event)=>{
+  123 │     let success=(. code:string)=>(. result:string)=>(. )=>{
+  124 │     logger(. "external")(. "Response from microapp2!")(. String(result
+      │ ))
+
+  unused variable event.
+
+
+  Warning number 26
+  /Users/nithin.n/Documents/rescript_play/src/Demo.res:123:9-15
+
+  121 │ @send external addEventListner : (Dom.element,string,Dom.event=>unit)=
+      │ >unit="addEventListner"
+  122 │ requestButton->addEventListner( "click",(event)=>{
+  123 │     let success=(. code:string)=>(. result:string)=>(. )=>{
+  124 │     logger(. "external")(. "Response from microapp2!")(. String(result
+      │ ))
+  125 │ }
+
+  unused variable success.
+
+
+  Warning number 27
+  /Users/nithin.n/Documents/rescript_play/src/Demo.res:123:20-23
+
+  121 │ @send external addEventListner : (Dom.element,string,Dom.event=>unit)=
+      │ >unit="addEventListner"
+  122 │ requestButton->addEventListner( "click",(event)=>{
+  123 │     let success=(. code:string)=>(. result:string)=>(. )=>{
+  124 │     logger(. "external")(. "Response from microapp2!")(. String(result
+      │ ))
+  125 │ }
+
+  unused variable code.
+
+#Done(1689141105936)

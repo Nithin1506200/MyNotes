@@ -1,0 +1,18 @@
+rescript = 1
+g_finger := /Users/nithin.n/Documents/rescript_play/node_modules/@rescript/core/lib/ocaml/install.stamp
+g_finger := /Users/nithin.n/Documents/rescript_play/node_modules/rescript-webapi/lib/ocaml/install.stamp
+rule astj
+  command = /Users/nithin.n/Documents/rescript_play/node_modules/rescript/darwinarm64/bsc.exe  -bs-v 10.1.4 -open RescriptCore -absname -bs-ast -o $out $i
+o src/Demo.ast : astj ../../src/Demo.res
+rule deps
+  command = /Users/nithin.n/Documents/rescript_play/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 1f5dd7ed31da0ad87556c8d051a32f97 $in
+  restat = 1
+o src/Demo.d : deps src/Demo.ast
+rule mij
+  command = /Users/nithin.n/Documents/rescript_play/node_modules/rescript/darwinarm64/bsc.exe -I src -I /Users/nithin.n/Documents/rescript_play/node_modules/@rescript/core/lib/ocaml -I /Users/nithin.n/Documents/rescript_play/node_modules/rescript-webapi/lib/ocaml -open RescriptCore  -bs-package-name rescript-project-template -bs-package-output commonjs:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/Demo.cmj src/Demo.cmi ../../src/Demo.bs.js : mij src/Demo.ast
+o src/webapi_eg.ast : astj ../../src/webapi_eg.res
+o src/webapi_eg.d : deps src/webapi_eg.ast
+o src/webapi_eg.cmj src/webapi_eg.cmi ../../src/webapi_eg.bs.js : mij src/webapi_eg.ast

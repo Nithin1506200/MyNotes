@@ -1,0 +1,33 @@
+rescript = 1
+g_finger := /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/@rescript/core/lib/ocaml/install.stamp
+g_finger := /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/rescript-webapi/lib/ocaml/install.stamp
+rule astj
+  command = /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/rescript/darwinarm64/bsc.exe  -bs-v 10.1.4 -open RescriptCore -absname -bs-ast -o $out $i
+o src/learning/json.ast : astj ../../src/learning/json.res
+rule deps
+  command = /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/rescript/darwinarm64/bsb_helper.exe -hash 5d8d4058ab5c151604449037bb14d0a3 $in
+  restat = 1
+o src/learning/json.d : deps src/learning/json.ast
+rule mij
+  command = /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/rescript/darwinarm64/bsc.exe -I src/juspay -I src/learning -I src -I /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/@rescript/core/lib/ocaml -I /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/node_modules/rescript-webapi/lib/ocaml -open RescriptCore  -bs-package-name rescript-project-template -bs-package-output commonjs:$in_d:.bs.js -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/learning/json.cmj src/learning/json.cmi ../../src/learning/json.bs.js : mij src/learning/json.ast
+o src/learning/send.ast : astj ../../src/learning/send.res
+o src/learning/send.d : deps src/learning/send.ast
+o src/learning/send.cmj src/learning/send.cmi ../../src/learning/send.bs.js : mij src/learning/send.ast
+o src/learning/exports.ast : astj ../../src/learning/exports.res
+o src/learning/exports.d : deps src/learning/exports.ast
+o src/learning/exports.cmj src/learning/exports.cmi ../../src/learning/exports.bs.js : mij src/learning/exports.ast
+o src/learning/my_belt.ast : astj ../../src/learning/my_belt.res
+o src/learning/my_belt.d : deps src/learning/my_belt.ast
+o src/learning/my_belt.cmj src/learning/my_belt.cmi ../../src/learning/my_belt.bs.js : mij src/learning/my_belt.ast
+o src/learning/abstract.ast : astj ../../src/learning/abstract.res
+o src/learning/abstract.d : deps src/learning/abstract.ast
+o src/learning/abstract.cmj src/learning/abstract.cmi ../../src/learning/abstract.bs.js : mij src/learning/abstract.ast
+o src/juspay/Demo.ast : astj ../../src/juspay/Demo.res
+o src/juspay/Demo.d : deps src/juspay/Demo.ast
+o src/juspay/Demo.cmj src/juspay/Demo.cmi ../../src/juspay/Demo.bs.js : mij src/juspay/Demo.ast
+o src/juspay/assignment.ast : astj ../../src/juspay/assignment.res
+o src/juspay/assignment.d : deps src/juspay/assignment.ast
+o src/juspay/assignment.cmj src/juspay/assignment.cmi ../../src/juspay/assignment.bs.js : mij src/juspay/assignment.ast
