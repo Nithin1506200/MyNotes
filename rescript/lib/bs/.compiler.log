@@ -1,4 +1,4 @@
-#Start(1689310858571)
+#Start(1689568719854)
 
   Warning number 27
   /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/src/learning/abstract.res:29:14
@@ -22,6 +22,32 @@
   31 ┆ ()
 
   unused variable d.
+
+
+  Warning number 27
+  /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/src/juspay/Demo.res:50:12-14
+
+  48 ┆ | None => 
+  49 ┆ Js.log("the element is not found")
+  50 ┆ | Some(ele)=>
+  51 ┆ Js.log("the element is found")
+  52 ┆ 
+
+  unused variable ele.
+
+
+  Warning number 27
+  /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/src/juspay/Demo.res:124:42-46
+
+  122 │ 
+  123 │ @send external addEventListner : (Dom.element,string,Dom.event=>unit)=
+      │ >unit="addEventListner"
+  124 │ requestButton->addEventListner( "click",(event)=>{
+  125 │     let success=(. _:string)=>(. result:string)=>(. )=>{
+  126 │     logger(. "external")(. "Response from microapp2!")(. String(result
+      │ ))
+
+  unused variable event.
 
 
   Warning number 27
@@ -74,30 +100,4 @@
 
   unused variable code.
 
-
-  Warning number 27
-  /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/src/juspay/Demo.res:50:12-14
-
-  48 ┆ | None => 
-  49 ┆ Js.log("the element is not found")
-  50 ┆ | Some(ele)=>
-  51 ┆ Js.log("the element is found")
-  52 ┆ 
-
-  unused variable ele.
-
-
-  Warning number 27
-  /Users/nithin.n/Documents/Nithin_github/MyNotes/rescript/src/juspay/Demo.res:124:42-46
-
-  122 │ 
-  123 │ @send external addEventListner : (Dom.element,string,Dom.event=>unit)=
-      │ >unit="addEventListner"
-  124 │ requestButton->addEventListner( "click",(event)=>{
-  125 │     let success=(. _:string)=>(. result:string)=>(. )=>{
-  126 │     logger(. "external")(. "Response from microapp2!")(. String(result
-      │ ))
-
-  unused variable event.
-
-#Done(1689310858617)
+#Done(1689568719928)
