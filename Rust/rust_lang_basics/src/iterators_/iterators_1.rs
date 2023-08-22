@@ -35,7 +35,28 @@ impl<'a> Iterator for StrSplit<'a> {
 #[cfg(test)]
 mod test {
     use super::StrSplit;
+    #[test]
+    fn eg() {
+        for x in vec!["a", "b", "c"] {
+            // there isn't for in loops really in rust it turns into iter
+        }
+        // for loop turns into
+        let mut iter = vec!["a", "b", "c"].into_iter();
+        while let Some(e) = iter.next() {
+            //e
+        }
 
+        let vs = vec![1, 2, 3];
+        // for v in vs {
+        //     //consumes vs, owned v
+        // } //if you uncomment this for loop gets an error for borrow
+        for v in vs.iter() {
+            //borrows vs , & to v
+        }
+        for v in &vs {
+            // equivalent to vs.iter()
+        }
+    }
     #[test]
     fn it_works() {
         let haystack = "a b c d e";
