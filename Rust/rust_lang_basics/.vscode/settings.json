@@ -1,22 +1,23 @@
 {
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#e1cbd9",
-    "activityBar.background": "#e1cbd9",
-    "activityBar.foreground": "#15202b",
-    "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#788d52",
+    "activityBar.activeBackground": "#c32b03",
+    "activityBar.background": "#c32b03",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#013f0e",
     "activityBarBadge.foreground": "#e7e7e7",
-    "commandCenter.border": "#15202b99",
-    "sash.hoverBorder": "#e1cbd9",
-    "statusBar.background": "#cfaac2",
-    "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#bd89ab",
-    "statusBarItem.remoteBackground": "#cfaac2",
-    "statusBarItem.remoteForeground": "#15202b",
-    "titleBar.activeBackground": "#cfaac2",
-    "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveBackground": "#cfaac299",
-    "titleBar.inactiveForeground": "#15202b99"
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#c32b03",
+    "statusBar.background": "#912002",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#c32b03",
+    "statusBarItem.remoteBackground": "#912002",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#912002",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#91200299",
+    "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#cfaac2"
+  "peacock.color": "#912002",
+  "rust-analyzer.linkedProjects": ["./Cargo.toml"]
 }
