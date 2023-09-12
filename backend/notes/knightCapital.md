@@ -18,7 +18,7 @@ This was very bad news for Knight but was only fair to its trading partners, who
 
 Once it was clear that the trades would stand, Knight had no choice but to sell off the stocks it had bought. Just as the morning’s buying rampage had driven up the price of those shares, a massive sale into the market would likely have forced down the price, possibly to a point so low that Knight would not have been able to cover the losses.
 
-Goldman Sachs stepped in to buy Knight’s entire unwanted position at a price that cost Knight $440 million – a staggering blow, but one the firm might be able to absorb. And if Knight failed, the only injured party, apart from Knight’s shareholders (including Goldman), would have been Goldman itself.
+`Goldman Sachs` stepped in to buy Knight’s entire unwanted position at a price that cost Knight $440 million – a staggering blow, but one the firm might be able to absorb. And if Knight failed, the only injured party, apart from Knight’s shareholders (including Goldman), would have been Goldman itself.
 
 Disposing of the accidentally purchased shares was only the first step in Knight CEO Thomas Joyce’s battle to save his company. The trades had sapped the firm’s capital, which would have forced it to greatly cut back its business, or maybe to stop operating altogether, without a cash infusion. And as word spread about the software debacle, customers were liable to abandon the company if they did not trust its financial and operational capacities.
 
@@ -32,17 +32,17 @@ If you just want to read more project failure case studies? Then have a look at 
 Timeline of Events
 Some of Knight’s biggest customers were the discount brokers and online brokerages such as TD Ameritrade, E*Trade, Scottrade, and Vanguard. Knight also competed for business with financial services giants like Citigroup, UBS, and Citadel. However, these larger competitors could internalize increasingly larger amounts of trading away from the public eye in their own exclusive markets or shared private markets, so-called dark pools. Since 2008, the portion of all stock trades in the U.S. taking place away from public markets has risen from 15 percent to more than 40 percent.
 
-In October 2011, the NYSE proposed a dark pool of its own, called the Retail Liquidity Program (RLP). The RLP would create a private market of traders within the NYSE that could anonymously transact shares for fractions of pennies more or less than the displayed bid and offer prices, respectively. The RLP was controversial even within NYSE Euronext, the parent company of the NYSE; its CEO, Duncan Niederauer, had written a public letter in the Financial Times criticizing dark pools for shifting “more and more information… outside the public view and excluded from the price discovery process.”
+In October 2011, the NYSE proposed a dark pool of its own, called the `Retail Liquidity Program (RLP)`. The RLP would create a private market of traders within the NYSE that could anonymously transact shares for fractions of pennies more or less than the displayed bid and offer prices, respectively. The RLP was controversial even within NYSE Euronext, the parent company of the NYSE; its CEO, Duncan Niederauer, had written a public letter in the Financial Times criticizing dark pools for shifting “more and more information… outside the public view and excluded from the price discovery process.”
 
 The SEC decision benefited large institutional investors who could now buy or sell large blocks of shares with relative anonymity and without moving the public markets; however, it came again at the expense of market makers. During the months of debate, Joyce had not given the RLP much chance for approval, saying in one interview, “Frankly, I don’t see how the SEC can be possibly OK it.” In early June 2012, the NYSE received SEC approval of its RLP, and it quickly announced the RLP would go live on August 1, 2012, giving market makers just over 30 days to prepare. Joyce insisted on participating in the RLP because giving up the order flow without a fight would have further dented profits in its best line of business.
 What Went Wrong
-With only a month between the RLP’s approval and its go-live, Knight’s software development team worked feverishly to make the necessary changes to its trade execution systems – including SMARS, its algorithmic, high-speed order router. SMARS stands for Smart Market Access Routing System.
+With only a month between the RLP’s approval and its go-live, Knight’s software development team worked feverishly to make the necessary changes to its trade execution systems – including SMARS, its algorithmic, high-speed order router. SMARS stands for `Smart Market Access Routing System.`
 
 SMARS was able to execute thousands of orders per second and could compare prices between dozens of different trading venues within fractions of a second.
 
 A core feature of SMARS is to receive orders from other upstream components in Knight’s trading platform (“parent” orders) and then, as needed based on the available liquidity and price, sends one or more representative (“child”) orders to downstream, external venues for execution.
 
-Power Peg
+## Power Peg
 
 The new RLP code in SMARS replaced some unused code in the relevant portion of the order router; the old code previously had been used for an order algorithm called “Power Peg,” which Knight had stopped using since 2003. Power Peg was a test program that bought high and sold low; it was specifically designed to move stock prices higher and lower in order to verify the behavior of its other proprietary trading algorithms in a controlled environment. It was not to be used in the live, production environment.
 
@@ -54,7 +54,7 @@ There had been substantial code refactorings in SMARS over the years without tho
 
 Manual deployment
 
-In the week before go-live, a Knight engineer manually deployed the new RLP code in SMARS to its eight servers. However, the engineer made a mistake and did not copy the new code to one of the servers. Knight did not have a second engineer review the deployment, and neither was there an automated system to alert anyone to the discrepancy. Knight also had no written procedures requiring a supervisory review, all facts we shall return to later.
+In the week before go-live, a Knight engineer manually deployed the new `RLP code in SMARS to its eight servers`. However, the engineer made a mistake and did not copy the new code to `one of the servers`. Knight did not have a second engineer review the deployment, and neither was there an automated system to alert anyone to the discrepancy. Knight also had no written procedures requiring a supervisory review, all facts we shall return to later.
 
 The crash
 
