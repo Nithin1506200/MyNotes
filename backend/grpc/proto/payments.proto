@@ -11,12 +11,8 @@ message BtcPaymentRequest {
     int32 amount =3 ;
 }
 
-enum status {
-    STATUS_NEW=0;
-    STATUS_SUCCESS=1;
-    STATUS_FAILURE=2;
-}
+
 message BtcPaymentResponse {
-    status staus=1;
+    bool successful=1;
     string message=2;
 }
