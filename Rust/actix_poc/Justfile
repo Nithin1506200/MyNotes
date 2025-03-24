@@ -1,0 +1,25 @@
+# Set default shell to zsh
+set shell := ["zsh", "-c"]
+
+# Db setup
+DB_NAME := "payments_poc"
+DB_USER := "postgres"
+DB_PASSWORD := "postgres"
+DB_HOST := "localhost"
+DB_PORT := "5432"
+
+# Drop and recreate the database, then run migrations
+reset-db:
+    echo "Resetting database..."
+    dropdb -U {{DB_USER}} --if-exists {{DB_NAME}}
+    createdb -U {{DB_USER}} {{DB_NAME}}
+    diesel setup
+    diesel migration run
+    echo "Database reset complete."
+
+generate-schema:
+    diesel print-schema > src/schema.rs to print schema
+
+db-connect:
+    export DATABASE_URL="postgres://{{DB_USER}}:{{DB_PASSWORD}}@{{DB_USER}}:{{DB_PORT}}/{{DB_NAME}}"
+    psql -h {{DB_HOST}} -p {{DB_PORT}} -U {{DB_USER}} -d {{DB_NAME}}

@@ -1,0 +1,15 @@
+host = "localhost"
+port = 8080
+workers = 2
+
+[redis]
+host = "localhost"
+port = 6379
+
+[db]
+host = "localhost"
+port = 5432
+name = "payments_poc"
+user = "postgres"
+password = "postgres"
+pool = 3
