@@ -2,23 +2,19 @@
   "name": "tesit",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --loader ts-node/esm src/index.ts",
+    "build": "tsc",
+    "dev": "ts-node --esm src/index.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
   },
-  "dependencies": {
-    "next": "^13.2.1",
-    "nextra": "^2.2.16",
-    "nextra-theme-docs": "^2.2.16",
-    "react": "^18.2.0",
-    "react-docs": "^0.0.1",
-    "react-dom": "^18.2.0"
-  }
+  "dependencies": {}
 }
